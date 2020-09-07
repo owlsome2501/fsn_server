@@ -14,7 +14,7 @@
 #include <sys/time.h>
 
 
-#define PASSWDFILE "fsn.conf"
+#define PASSWDFILE "/etc/fsn.conf"
 
 
 extern char user_id[32];
