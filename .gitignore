@@ -1,0 +1,3 @@
+*.o
+fsn.conf
+fsn_server

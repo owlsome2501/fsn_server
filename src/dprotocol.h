@@ -7,7 +7,7 @@
 	size_t
 */
 
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,8 +20,8 @@
 #include <fcntl.h>
 #include <time.h>
 
-#define DOFFLINE         0
-#define DONLINE          1
+#define DOFFLINE 0
+#define DONLINE 1
 
 #define DR_SERVER_IP "202.38.210.131"
 #define DR_PORT 61440
@@ -30,16 +30,16 @@
 #define RETRY_TIME 5
 
 
-int drcom_pkt_id;
-int dstatus;
-char dstatusMsg[256];
-char dsystemMsg[256];
-char dUpdateAt[64];
+extern int drcom_pkt_id;
+extern int dstatus;
+extern char dstatusMsg[256];
+extern char dsystemMsg[256];
+extern char dUpdateAt[64];
 
 
 void init_env_d();
-int udp_recv(char* recv_buf);
-int udp_send_and_rev(char* send_buf, int send_len, char* recv_buf);
-void* serve_forever_d(void *args);
+int udp_recv(char *recv_buf);
+int udp_send_and_rev(char *send_buf, int send_len, char *recv_buf);
+void *serve_forever_d(void *args);
 
 #endif

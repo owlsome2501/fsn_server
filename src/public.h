@@ -9,24 +9,24 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-#include <netpacket/packet.h> 
+#include <netpacket/packet.h>
 #include <time.h>
 #include <sys/time.h>
 
 
-#define PASSWDFILE "/etc/fsn.conf"
+#define PASSWDFILE "fsn.conf"
 
 
-char user_id[32];
-char passwd[32];
-char interface_name[32];
-char listen_ip[32];
-int listen_port;
-int is_login;
-int is_stop_auth;
+extern char user_id[32];
+extern char passwd[32];
+extern char interface_name[32];
+extern char listen_ip[32];
+extern int listen_port;
+extern int is_login;
+extern int is_stop_auth;
 
-struct sockaddr_in my_ip;
-char my_mac[ETH_ALEN];
+extern struct sockaddr_in my_ip;
+extern char my_mac[ETH_ALEN];
 
 
 void get_from_file(char *);
@@ -38,8 +38,8 @@ void print_hex(char *hex, int len);
 int checkCPULittleEndian();
 uint32_t big2little_32(uint32_t A);
 
-void get_ctime(char* buf, int len);
+void get_ctime(char *buf, int len);
 int is_forbid_time();
-char* mac_ntoa(char src[ETH_ALEN]);
+char *mac_ntoa(char src[ETH_ALEN]);
 
 #endif
